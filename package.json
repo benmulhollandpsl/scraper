@@ -1,0 +1,30 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "scraper homework assignment",
+  "main": "scraper.js",
+  "scripts": {
+    "test": "scrape",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benmulhollandpsl/scraper.git"
+  },
+  "keywords": [
+    "buzzfeed"
+  ],
+  "author": "ben mulholland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benmulhollandpsl/scraper/issues"
+  },
+  "homepage": "https://github.com/benmulhollandpsl/scraper#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "mongoose": "^5.9.10"
+  }
+}
