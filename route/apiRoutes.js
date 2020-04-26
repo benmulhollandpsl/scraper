@@ -28,16 +28,17 @@ app.get("/scrape", (req, res) => {
             // console.log(title);
 
             //creat new Article usign the 'result' object we just scraped together
-
+                
             db.Article.create(result)
             .then(function(dbArticle) {
-                //view the added result in the console
-                console.log(dbArticle);
+              // View the added result in the console
+              console.log(dbArticle);
             })
-                .catch(function(err) {
-                    //if error occured, log it
-                    console.log(err);
-                });
+            .catch(function(err) {
+              // If an error occurred, log it
+              console.log(err);
+            });
+
 
         // $("div.card_image").each(i, element) {
         //     var title = $(this).children("img") 

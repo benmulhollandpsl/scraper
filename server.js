@@ -67,11 +67,15 @@ var PORT = 3000;
 
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
   // useMongoClient: true
 });
+
+const { MongoClient } = require('mongodb');
+
+MongoClient.connect('mongodb://notadomain');
+
 
 
 //Middleware
@@ -84,12 +88,21 @@ app.engine("handlebars", handlebars({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 //static refers to converting the public folder (the local host) into a static route
 app.use(express.static("public"));
-var apiRoute = require("./routes/apiRoutes");
+var apiRoute = require("./route/apiRoutes");
 apiRoute(app);
+
+
+
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+// mongoose.Promise = Promise;
+// mongoose.connect(MONGODB_URI, {
+//   // useMongoClient: true
+// });
+
 // Set the app to listen on port 3000
 app.listen(PORT, function() {
     console.log("App running on Port 3000!");
   });
-// //Deploy to heroku
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-mongoose.connect(MONGODB_URI);
+
+
+  
