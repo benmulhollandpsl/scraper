@@ -9,7 +9,6 @@ var ArticleSchema = new Schema({
     type: String,
     required: true
   },
-  // `link` is required and of type String
   Summary: {
       type: String
   },
@@ -32,16 +31,6 @@ saved: {
 
   }
 });
-//   link: {
-//     type: String,
-//     required: true
-//   },
-    // `note` is an object that stores a Note id
-    // The ref property links the ObjectId to the Note model
-    // This allows us to populate the Article with an associated Note
-  
-
-            // is that related to note.js in any way?
 
 
 // This creates our model from the above schema, using mongoose's model method
