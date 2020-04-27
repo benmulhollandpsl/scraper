@@ -30,12 +30,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 
+
 app.engine("handlebars", handlebars({defaultLayout: "main"}));
 //the first argument is the name of the extension, the second argument is where you want to populate/render the whole page 
 app.set("view engine", "handlebars");
 //static refers to converting the public folder (the local host) into a static route
 // app.use(express.static("public"))
 app.use('/static', express.static('public'))
+
+
 
 
 

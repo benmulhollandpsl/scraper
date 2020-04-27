@@ -3,7 +3,7 @@ body, html {
 }
 
 body {
-    background-image: url("../images/lined_paper.png");
+    background-image: url("../images/skyblue.jpg");
 }
 .titleJumbotron {
     margin: 0px;
@@ -15,7 +15,7 @@ body {
 .headerDivJumbotron {
     margin-top: 50px;
     margin-bottom: 50px;
-    background: url("../images/lined_paper.png");
+    background: url("../images/skyblue.jpg");
     text-align: center;
     border: 5px solid black;
     padding: 20px;
@@ -29,7 +29,7 @@ body {
 }
 
 #subheaderJumbotron {
-    background: url("../images/lined_paper.png");
+    background: url("../images/skyblue.jpg");
     font-family: 'Open Sans', sans-serif;
     font-size: 30px
 }
