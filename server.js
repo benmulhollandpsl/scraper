@@ -10,7 +10,7 @@ require("./routes/index")(app);
 
 // var db = require("./models");
 //Initialize Express
-var PORT = 8080;
+var PORT = 3000;
 
 
 
@@ -19,7 +19,10 @@ var PORT = 8080;
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI)
+  // useMongoClient: true
+
+
 
 //Middleware
 //the data that you get from the webpage takes the information from the post request and makes the data clean and readable
@@ -37,16 +40,11 @@ app.set("view engine", "handlebars");
 //static refers to converting the public folder (the local host) into a static route
 // app.use(express.static("public"))
 app.use('/static', express.static('public'))
-
-
-
-
-
 var apiRoute = require("./routes/apiRoutes");
 apiRoute(app);
 // Set the app to listen on port 3000
 app.listen(PORT, function() {
-    console.log("App running on Port 8080!");
+    console.log("App running on Port 3000!");
   });
 // //Deploy to heroku
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";

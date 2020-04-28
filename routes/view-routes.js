@@ -67,9 +67,9 @@ module.exports = function(app) {
                     headlineObject.articles.push(newObject);
 
                     if (i == (found.length - 1)) {
-                        // res.json(headlineObject)
-                        // let newArticles = headlineObject.articles.reverse();
-                        // headlineObject["articles"] = newArticles
+                        res.json(headlineObject)
+                        let newArticles = headlineObject.articles.reverse();
+                        headlineObject["articles"] = newArticles
                         res.render("saved", headlineObject)
                     }
                 }

@@ -11,9 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/benmulhollandpsl/scraper.git"
   },
-  "keywords": [
-    "buzzfeed"
-  ],
   "author": "ben mulholland",
   "license": "ISC",
   "bugs": {
