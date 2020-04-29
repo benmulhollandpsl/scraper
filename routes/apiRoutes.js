@@ -4,6 +4,9 @@ var mongoose = require("mongoose");
 var db = require("../models");
 // var Article = require("../models/article")
 
+// var router = express.router()
+
+
 
 function apiRoutes(app) {
 
@@ -29,7 +32,7 @@ app.get("/api/notes/all", function(req, res) {
 });
 
    // delete
-   app.delete("/api/reduce", function(req, res) {
+   app.get("/api/reduce", function(req, res) {
 
     db.Article.find({$query: {saved: false} }).sort( { date: -1 })
     .then( function(found) {
@@ -57,7 +60,7 @@ app.get("/api/notes/all", function(req, res) {
 
 })
 
-app.put("/api/save/article/:id", function(req, res) {
+app.get("/api/save/article/:id", function(req, res) {
     let articleId = req.params.id;
 
     db.Article.findOneAndUpdate(
@@ -71,7 +74,7 @@ app.put("/api/save/article/:id", function(req, res) {
 });
 
 
-app.put("/api/delete/article/:id", function(req, res) {
+app.get("/api/delete/article/:id", function(req, res) {
     let articleId = req.params.id;
 
     db.Article.findOneAndUpdate(

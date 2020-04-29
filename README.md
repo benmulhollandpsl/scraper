@@ -2,6 +2,14 @@
 web scraper using mongo
 
 
+* create server file
+* create routes files where you use express and express.router()
+* create appropriate routes to perform needed CRUD operations
+* inside of routes use model make database queries
+* the code base is already set up on the front end if you carefully copy over the lines of code in server.js that are  relative to handlebars
+
+
+
 site deploys to
  https://git.heroku.com/scrapermashable.git
 
@@ -9,7 +17,6 @@ site deploys to
 
 
 
-#Ben delete this before submitting homework!!!!
 
  Instructions
 Create an app that accomplishes the following:

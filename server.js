@@ -12,8 +12,10 @@ require("./routes/index")(app);
 //Initialize Express
 var PORT = 3000;
 
+app.post("/saved/:id", function(req, res){
+  console.log("request", req.body);
 
-
+});
 // mongoose.Promise = Promise;
 
 
@@ -38,10 +40,12 @@ app.engine("handlebars", handlebars({defaultLayout: "main"}));
 //the first argument is the name of the extension, the second argument is where you want to populate/render the whole page 
 app.set("view engine", "handlebars");
 //static refers to converting the public folder (the local host) into a static route
-// app.use(express.static("public"))
+app.use(express.static("public"))
 app.use('/static', express.static('public'))
-var apiRoute = require("./routes/apiRoutes");
-apiRoute(app);
+var routes = require("./routes/");
+app.use(routes)
+
+
 // Set the app to listen on port 3000
 app.listen(PORT, function() {
     console.log("App running on Port 3000!");
@@ -49,3 +53,5 @@ app.listen(PORT, function() {
 // //Deploy to heroku
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 // mongoose.connect(MONGODB_URI);
+
+//
